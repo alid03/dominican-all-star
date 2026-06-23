@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dominican All Star — Barbershop & Salon · Marietta, GA</title>
+<meta name="description" content="Dominican All Star Barbershop & Glam Dominican Salon. Expert cuts, fades, braids, color & more. Walk-ins welcome. 677 Franklin Gateway SE, Marietta GA."/>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin/>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: [
+        "Bebas Neue",
+        "Montserrat:300,400,500,600,700,800,900",
+        "Bitter:400,700",
+        "Lato:300,400,700"
+      ]
+    }
+  });
+</script>
+
+<style>
+/* ── RESET ─────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #222;
+  background: #fff;
+  overflow-x: hidden;
+}
+img { display: block; width: 100%; height: 100%; object-fit: cover; }
+a { text-decoration: none; color: inherit; }
+
+/* ── NAV ────────────────────────────────────── */
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+  background: #1a1010;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 3rem;
+  height: 72px;
+  border-bottom: 2px solid #c0392b;
+}
+.nav-logo {
+  display: flex; align-items: center; gap: .6rem;
+  flex-shrink: 0;
+}
+.logo-img {
+  display: block;
+  width: auto; height: 44px;
+  object-fit: contain;
+}
+.logo-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: .08em;
+  color: #fff;
+}
+.logo-text .red { color: #c0392b; }
+.nav-links {
+  display: flex; gap: 0; list-style: none;
+}
+.nav-links a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.5);
+  padding: .5rem 1.5rem;
+  transition: color .2s;
+}
+.nav-links a:hover { color: #fff; }
+.nav-right { display: flex; align-items: center; gap: 1.5rem; }
+.lang-wrap {
+  display: flex; border: 1px solid rgba(255,255,255,.15); border-radius: 2px; overflow: hidden;
+}
+.lang-wrap button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .62rem; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: rgba(255,255,255,.35);
+  background: none; border: none; cursor: pointer;
+  padding: .28rem .6rem;
+  transition: background .2s, color .2s;
+}
+.lang-wrap button.on { background: #c0392b; color: #fff; }
+.nav-phone {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .68rem; font-weight: 600;
+  letter-spacing: .1em;
+  color: rgba(255,255,255,.55);
+  white-space: nowrap;
+  transition: color .2s;
+}
+.nav-phone:hover { color: #fff; }
+
+/* hamburger */
+.hamburger {
+  display: none;
+  background: none; border: none; cursor: pointer;
+  padding: .35rem;
+  flex-direction: column; gap: 5px;
+  margin-left: .5rem;
+}
+.hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: rgba(255,255,255,.8);
+  transition: transform .28s ease, opacity .28s ease;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── HERO ────────────────────────────────────── */
+.hero {
+  margin-top: 72px;
+  height: calc(100svh - 72px);
+  position: relative;
+  overflow: hidden;
+}
+.hero-img { position: absolute; inset: 0; }
+.hero-img img { object-position: center 25%; }
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(20,10,10,.1) 0%,
+    rgba(20,10,10,.45) 50%,
+    rgba(20,10,10,.9) 100%
+  );
+}
+.hero-content {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 4rem 3rem 5rem;
+}
+.hero-eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .7rem; font-weight: 600;
+  letter-spacing: .28em; text-transform: uppercase;
+  color: rgba(255,255,255,.5);
+  margin-bottom: 1.1rem;
+}
+.hero-headline {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(5rem, 13vw, 12rem);
+  line-height: .9; letter-spacing: .03em;
+  color: #fff;
+}
+.hero-headline .red { color: #c0392b; }
+.hero-bottom {
+  margin-top: 2.25rem;
+  display: flex; align-items: center; gap: 1.75rem;
+  flex-wrap: wrap;
+}
+.hero-sub {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  color: rgba(255,255,255,.5);
+  font-style: italic;
+}
+.btn-main {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .72rem; font-weight: 700;
+  letter-spacing: .15em; text-transform: uppercase;
+  color: #fff; background: #c0392b;
+  padding: 1rem 2rem;
+  transition: background .2s;
+  white-space: nowrap;
+}
+.btn-main:hover { background: #a93226; }
+.hero-dir {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .68rem; font-weight: 600;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: rgba(255,255,255,.62);
+  border-bottom: 1px solid rgba(255,255,255,.25);
+  padding-bottom: 1px;
+  transition: color .2s, border-color .2s;
+}
+.hero-dir:hover { color: #fff; border-color: rgba(255,255,255,.55); }
+
+/* ── ABOUT (2-col: photo + text) ── */
+.about-section {
+  background: #fff;
+  overflow: hidden;
+}
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 640px;
+}
+.about-photo {
+  position: relative;
+  overflow: hidden;
+}
+.about-photo img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+.about-text {
+  padding: 6rem 5rem 6rem 4.5rem;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.about-text .label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .68rem; font-weight: 700;
+  letter-spacing: .24em; text-transform: uppercase;
+  color: #c0392b;
+  margin-bottom: 1.25rem;
+}
+.about-text h2 {
+  font-family: 'Bitter', serif;
+  font-size: clamp(1.7rem, 2.8vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a1010;
+  margin-bottom: 1.75rem;
+}
+.about-text p {
+  font-family: 'Lato', sans-serif;
+  font-size: .97rem;
+  color: #555;
+  line-height: 1.9;
+  margin-bottom: 1.1rem;
+}
+.about-pull {
+  margin-top: 2rem;
+  padding-left: 1.4rem;
+  border-left: 3px solid #c0392b;
+}
+.about-pull p {
+  font-family: 'Bitter', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.7;
+  margin: 0;
+}
+.about-pull cite {
+  display: block;
+  margin-top: .6rem;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-size: .62rem; font-weight: 600;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: #aaa;
+}
+
+/* ── GALLERY ── */
+.gallery-section {
+  background: #1a1010;
+  padding: 5rem 3rem 5.5rem;
+}
+.gallery-section .section-head {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.gallery-section .label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .68rem; font-weight: 700;
+  letter-spacing: .24em; text-transform: uppercase;
+  color: #c0392b;
+  margin-bottom: .85rem;
+}
+.gallery-section h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  letter-spacing: .06em;
+  color: #fff;
+}
+/* single 4-col grid, 4 rows, all 12 images */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 340px 340px 320px 220px;
+  gap: 6px;
+}
+.photo-grid .cell { overflow: hidden; background: #2a1f1f; }
+.photo-grid .cell.tall { grid-row: span 2; }
+.photo-grid .cell.wide { grid-column: span 2; }
+.photo-grid img { transition: transform .5s ease; }
+.photo-grid .cell:hover img { transform: scale(1.04); }
+
+/* ── SERVICES ── */
+.services-section {
+  background: #f5f2ef;
+  padding: 7rem 3rem;
+}
+.services-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1.8fr; gap: 6rem; align-items: start;
+}
+.services-left .label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .68rem; font-weight: 700;
+  letter-spacing: .24em; text-transform: uppercase;
+  color: #c0392b; margin-bottom: 1rem;
+}
+.services-left h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  letter-spacing: .04em; color: #1a1010;
+  line-height: 1; margin-bottom: 1.25rem;
+}
+.services-left p {
+  font-family: 'Lato', sans-serif;
+  font-size: .95rem; color: #666; line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+.walk-tag {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .63rem; font-weight: 700;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: #c0392b;
+  border: 1.5px solid #c0392b;
+  padding: .35rem .85rem;
+}
+.svc-list { list-style: none; }
+.svc-row {
+  display: flex; align-items: center; gap: .5rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #ddd;
+}
+.svc-row:first-child { border-top: 1px solid #ddd; }
+.svc-name {
+  font-family: 'Bitter', serif;
+  font-size: 1.1rem; font-weight: 700;
+  color: #1a1010; flex: 1;
+}
+.svc-dots {
+  flex: 1; border-bottom: 1px dashed #ccc;
+  margin: 0 .5rem; position: relative; top: -.2rem;
+}
+.svc-price {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .83rem; font-weight: 700;
+  color: #c0392b; white-space: nowrap;
+}
+
+/* ── SALON (dark) ── */
+.salon-section {
+  background: #1a1010;
+  display: grid; grid-template-columns: 1fr 1fr;
+  min-height: 600px;
+}
+.salon-img { position: relative; overflow: hidden; min-height: 500px; }
+.salon-img img { object-position: center 20%; }
+.salon-content {
+  padding: 6rem 4.5rem;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.salon-content .label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .68rem; font-weight: 700;
+  letter-spacing: .24em; text-transform: uppercase;
+  color: #c0392b; margin-bottom: 1rem;
+}
+.salon-content h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 4vw, 3.8rem);
+  letter-spacing: .04em; color: #fff;
+  line-height: 1; margin-bottom: 1.5rem;
+}
+.salon-content p {
+  font-family: 'Lato', sans-serif;
+  font-size: .95rem; color: rgba(255,255,255,.45);
+  line-height: 1.85; margin-bottom: 1.75rem;
+}
+.salon-tags {
+  display: flex; flex-wrap: wrap; gap: .5rem;
+  margin-bottom: 2rem;
+}
+.salon-tag {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .63rem; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: rgba(255,255,255,.4);
+  border: 1px solid rgba(255,255,255,.1);
+  padding: .3rem .75rem;
+}
+.salon-phone {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .85rem; font-weight: 600;
+  color: #c0392b; letter-spacing: .06em;
+  transition: color .2s;
+}
+.salon-phone:hover { color: #e04034; }
+
+/* ── REVIEWS ── */
+.reviews-section {
+  background: #fff;
+  padding: 7rem 3rem;
+}
+.reviews-inner {
+  max-width: 1100px; margin: 0 auto;
+}
+.reviews-section .label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .68rem; font-weight: 700;
+  letter-spacing: .24em; text-transform: uppercase;
+  color: #c0392b;
+  margin-bottom: 3.5rem;
+  text-align: center;
+  display: block;
+}
+/* featured review */
+.rev-feature {
+  text-align: center;
+  padding: 0 3rem 3.5rem;
+  border-bottom: 1px solid #ececec;
+  margin-bottom: 3.5rem;
+}
+.rev-feature .rev-text {
+  font-family: 'Bitter', serif;
+  font-style: italic;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  color: #333; line-height: 1.72;
+  margin-bottom: 1.5rem;
+  max-width: 800px; margin-left: auto; margin-right: auto;
+}
+.rev-feature .stars {
+  display: block;
+  color: #c0392b; font-size: .82rem; letter-spacing: .12em;
+  margin-bottom: .5rem;
+}
+.rev-feature .rev-by {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .62rem; font-weight: 700;
+  letter-spacing: .18em; text-transform: uppercase; color: #bbb;
+}
+/* 2 smaller reviews */
+.rev-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+}
+.rev-card {
+  padding-left: 1.5rem;
+  border-left: 2px solid #ececec;
+}
+.stars { color: #c0392b; font-size: .82rem; letter-spacing: .08em; margin-bottom: 1rem; }
+.rev-text {
+  font-family: 'Bitter', serif;
+  font-style: italic; font-size: .95rem;
+  color: #555; line-height: 1.8; margin-bottom: 1.1rem;
+}
+.rev-by {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .6rem; font-weight: 700;
+  letter-spacing: .16em; text-transform: uppercase; color: #ccc;
+}
+
+/* ── CONTACT / HOURS ── */
+.contact-section {
+  background: #f5f2ef;
+  padding: 7rem 3rem;
+}
+.contact-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 5rem;
+}
+.contact-left .label, .contact-right .label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .68rem; font-weight: 700;
+  letter-spacing: .24em; text-transform: uppercase;
+  color: #c0392b; margin-bottom: 1rem;
+}
+.contact-left h2, .contact-right h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  letter-spacing: .04em; color: #1a1010; margin-bottom: 2rem;
+}
+.locs { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.loc h3 {
+  font-family: 'Bitter', serif;
+  font-size: 1rem; font-weight: 700;
+  color: #1a1010; margin-bottom: 1rem;
+  padding-bottom: .5rem;
+  border-bottom: 2px solid #c0392b;
+}
+.hour-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: .6rem 0; border-bottom: 1px solid #ddd;
+  font-size: .84rem;
+}
+.hour-row:first-of-type { border-top: 1px solid #ddd; }
+.hday { color: #888; font-weight: 400; }
+.htime { font-weight: 700; color: #1a1010; }
+.htime.hi { color: #c0392b; }
+.loc-ph {
+  margin-top: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .8rem; font-weight: 600; color: #555;
+}
+.loc-ph a { color: #c0392b; transition: color .2s; }
+.loc-ph a:hover { color: #a93226; }
+.map-wrap {
+  width: 100%; aspect-ratio: 16/10;
+  overflow: hidden;
+}
+.map-wrap iframe { width: 100%; height: 100%; border: none; display: block; }
+.links-list { margin-top: 2.5rem; display: flex; flex-direction: column; gap: .65rem; }
+.lnk {
+  display: flex; align-items: center; gap: .75rem;
+  font-family: 'Lato', sans-serif;
+  font-size: .87rem; color: #666;
+  transition: color .2s;
+}
+.lnk:hover { color: #c0392b; }
+.lnk svg { width: 15px; height: 15px; flex-shrink: 0; color: #c0392b; }
+
+/* ── FOOTER ── */
+footer {
+  background: #1a1010;
+  padding: 2.5rem 3rem;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 1.25rem;
+  border-top: 2px solid #c0392b;
+}
+.foot-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem; letter-spacing: .08em; color: #fff;
+}
+.foot-logo span { color: #c0392b; }
+.foot-links { display: flex; gap: 1.5rem; }
+.foot-links a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .65rem; font-weight: 600;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: rgba(255,255,255,.28);
+  transition: color .2s;
+}
+.foot-links a:hover { color: rgba(255,255,255,.8); }
+.foot-copy {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .6rem; color: rgba(255,255,255,.18);
+  letter-spacing: .08em;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .about-inner { grid-template-columns: 1fr; }
+  .about-photo { min-height: 380px; position: relative; }
+  .about-photo img { position: absolute; }
+  .about-text { padding: 4.5rem 3rem; }
+  .services-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .salon-section { grid-template-columns: 1fr; }
+  .salon-img { min-height: 50vw; }
+  .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .locs { grid-template-columns: 1fr; gap: 2rem; }
+  .rev-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  /* gallery: 2-col on tablet */
+  .photo-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
+    grid-auto-rows: 260px;
+  }
+  .photo-grid .cell.tall { grid-row: span 1; }
+  .photo-grid .cell.wide { grid-column: span 2; }
+}
+@media (max-width: 768px) {
+  .navbar { padding: 0 1.25rem; }
+  .nav-links {
+    display: none;
+    position: fixed; top: 72px; left: 0; right: 0;
+    background: #1a1010;
+    flex-direction: column;
+    padding: .5rem 1.5rem 1.5rem;
+    border-bottom: 2px solid #c0392b;
+    z-index: 998;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links li { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .nav-links a { display: block; padding: .9rem 0; font-size: .78rem; }
+  .hamburger { display: flex; }
+  .nav-right .lang-wrap { display: none; }
+  .nav-phone { display: none; }
+  .hero-content { padding: 2rem 1.5rem 3.5rem; }
+  .about-text { padding: 3.5rem 1.5rem; }
+  .gallery-section { padding: 4rem 1.25rem 4.5rem; }
+  .services-section { padding: 5rem 1.5rem; }
+  .salon-content { padding: 4rem 2rem; }
+  .reviews-section { padding: 5rem 1.5rem; }
+  .rev-feature { padding: 0 0 2.5rem; }
+  .contact-section { padding: 5rem 1.5rem; }
+  footer { padding: 2rem 1.5rem; }
+  .photo-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 200px;
+  }
+  .photo-grid .cell.tall { grid-row: span 1; }
+  .photo-grid .cell.wide { grid-column: span 2; }
+}
+@media (max-width: 480px) {
+  .foot-links { gap: 1rem; }
+  .foot-copy { display: none; }
+}
+
+/* ── SCROLL REVEAL ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity .75s cubic-bezier(.16,1,.3,1), transform .75s cubic-bezier(.16,1,.3,1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-52px);
+  transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1);
+}
+.reveal-left.visible { opacity: 1; transform: translateX(0); }
+.reveal-right {
+  opacity: 0;
+  transform: translateX(52px);
+  transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1);
+}
+.reveal-right.visible { opacity: 1; transform: translateX(0); }
+.stagger-reveal > * {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .55s cubic-bezier(.16,1,.3,1), transform .55s cubic-bezier(.16,1,.3,1);
+}
+.stagger-reveal.visible > * { opacity: 1; transform: translateY(0); }
+.stagger-reveal.visible > *:nth-child(1)  { transition-delay: .00s; }
+.stagger-reveal.visible > *:nth-child(2)  { transition-delay: .05s; }
+.stagger-reveal.visible > *:nth-child(3)  { transition-delay: .10s; }
+.stagger-reveal.visible > *:nth-child(4)  { transition-delay: .15s; }
+.stagger-reveal.visible > *:nth-child(5)  { transition-delay: .20s; }
+.stagger-reveal.visible > *:nth-child(6)  { transition-delay: .25s; }
+.stagger-reveal.visible > *:nth-child(7)  { transition-delay: .30s; }
+.stagger-reveal.visible > *:nth-child(8)  { transition-delay: .35s; }
+.stagger-reveal.visible > *:nth-child(9)  { transition-delay: .40s; }
+.stagger-reveal.visible > *:nth-child(10) { transition-delay: .45s; }
+.stagger-reveal.visible > *:nth-child(11) { transition-delay: .50s; }
+.stagger-reveal.visible > *:nth-child(12) { transition-delay: .55s; }
+
+/* ── STATS BAR ── */
+.stats-bar { background: #c0392b; padding: 3.5rem 3rem; }
+.stats-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 2rem; text-align: center;
+}
+.stat-item { display: flex; flex-direction: column; align-items: center; gap: .35rem; }
+.stat-num-wrap {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.8rem, 4.5vw, 4rem);
+  line-height: 1; color: #fff;
+  display: flex; align-items: baseline; gap: .06em;
+}
+.stat-suf { font-size: .52em; color: rgba(255,255,255,.6); }
+.stat-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .62rem; font-weight: 600;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: rgba(255,255,255,.55);
+}
+@media (max-width: 768px) {
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .stats-bar { padding: 2.5rem 1.5rem; }
+}
+
+/* ── GALLERY EXPAND ICON ── */
+.photo-grid .cell { cursor: zoom-in; position: relative; }
+.cell-expand {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; z-index: 2;
+  background: rgba(192,57,43,0);
+  transition: opacity .28s ease, background .28s ease;
+}
+.photo-grid .cell:hover .cell-expand { opacity: 1; background: rgba(192,57,43,.22); }
+.cell-expand svg {
+  width: 36px; height: 36px; color: #fff;
+  filter: drop-shadow(0 2px 10px rgba(0,0,0,.6));
+}
+
+/* ── LIGHTBOX ── */
+.lightbox {
+  position: fixed; inset: 0; z-index: 9999;
+  background: rgba(8,3,3,.97);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity .32s ease;
+}
+.lightbox.active { opacity: 1; pointer-events: all; }
+#lb-img {
+  max-width: 88vw; max-height: 85vh;
+  width: auto; height: auto;
+  object-fit: contain; display: block;
+  border: 1.5px solid rgba(192,57,43,.3);
+  transform: scale(.92);
+  transition: transform .42s cubic-bezier(.16,1,.3,1), opacity .22s ease;
+}
+.lightbox.active #lb-img { transform: scale(1); }
+#lb-img.fade { opacity: 0; transform: scale(.95); }
+.lb-btn {
+  position: fixed; top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1);
+  cursor: pointer; color: rgba(255,255,255,.55);
+  font-size: 1.6rem; line-height: 1; padding: .85rem 1.05rem;
+  transition: background .2s, color .2s, transform .2s;
+  z-index: 10000; border-radius: 2px;
+}
+.lb-btn:hover { background: rgba(192,57,43,.35); color: #fff; transform: translateY(-50%) scale(1.08); }
+.lb-prev { left: 1rem; }
+.lb-next { right: 1rem; }
+.lb-close {
+  position: fixed; top: 1.1rem; right: 1.4rem;
+  background: none; border: none; cursor: pointer;
+  color: rgba(255,255,255,.4); font-size: 1.8rem; line-height: 1;
+  transition: color .2s, transform .25s; z-index: 10000; font-weight: 300;
+}
+.lb-close:hover { color: #fff; transform: rotate(90deg); }
+.lb-counter {
+  position: fixed; bottom: 1.4rem; left: 50%; transform: translateX(-50%);
+  font-family: 'Montserrat', sans-serif;
+  font-size: .58rem; font-weight: 600;
+  letter-spacing: .22em; text-transform: uppercase;
+  color: rgba(255,255,255,.3); white-space: nowrap;
+}
+
+/* ── ACTIVE NAV UNDERLINE ── */
+.nav-links a { position: relative; }
+.nav-links a::after {
+  content: '';
+  position: absolute; bottom: 0; left: 1.5rem; right: 1.5rem;
+  height: 1.5px; background: #c0392b;
+  transform: scaleX(0); transform-origin: center;
+  transition: transform .25s ease;
+}
+.nav-links a:hover::after, .nav-links a.nav-active::after { transform: scaleX(1); }
+.nav-links a.nav-active { color: #fff; }
+@media (max-width: 768px) { .nav-links a::after { display: none; } }
+
+/* ── SERVICE ROW HOVER ACCENT ── */
+.svc-row {
+  transition: background .18s ease, padding-left .22s cubic-bezier(.16,1,.3,1), box-shadow .18s ease;
+}
+.svc-row:hover {
+  background: rgba(192,57,43,.05);
+  padding-left: .75rem;
+  box-shadow: inset 2.5px 0 0 #c0392b;
+}
+
+/* ── SALON TAG HOVER ── */
+.salon-tag { transition: background .18s, color .18s, border-color .18s, transform .2s; }
+.salon-tag:hover {
+  background: rgba(192,57,43,.15);
+  color: rgba(255,255,255,.85);
+  border-color: rgba(192,57,43,.4);
+  transform: translateY(-1px);
+}
+
+/* ── BUTTON SHINE ── */
+.btn-main { position: relative; overflow: hidden; }
+.btn-main::before {
+  content: '';
+  position: absolute; top: 0; left: -100%;
+  width: 60%; height: 100%;
+  background: rgba(255,255,255,.15);
+  transform: skewX(-20deg);
+  transition: left .45s ease;
+}
+.btn-main:hover::before { left: 150%; }
+
+/* overflow guards for slide-in reveals */
+.about-section, .services-section, .salon-section, .contact-section { overflow: hidden; }
+
+/* ── STATS 3-COL FIX ── */
+.stats-inner { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 768px) { .stats-inner { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 480px) { .stats-inner { grid-template-columns: 1fr; } }
+
+/* ── SALON PRICE LIST SECTION ── */
+.salon-prices-section { background: #f5f2ef; padding: 7rem 3rem; overflow: hidden; }
+.salon-prices-inner { max-width: 1100px; margin: 0 auto; }
+.salon-prices-head { text-align: center; margin-bottom: 4rem; }
+.salon-prices-head .label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .68rem; font-weight: 700;
+  letter-spacing: .24em; text-transform: uppercase;
+  color: #c0392b; margin-bottom: .85rem; display: block;
+}
+.salon-prices-head h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  letter-spacing: .05em; color: #1a1010;
+}
+.price-categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+.price-cat h3 {
+  font-family: 'Bitter', serif;
+  font-size: 1rem; font-weight: 700;
+  color: #1a1010;
+  padding-bottom: .5rem;
+  border-bottom: 2px solid #c0392b;
+  margin-bottom: 1rem;
+}
+.salon-price-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: .55rem 0;
+  border-bottom: 1px solid #ddd;
+  transition: background .18s, padding-left .2s, box-shadow .18s;
+}
+.salon-price-row:hover {
+  background: rgba(192,57,43,.05);
+  padding-left: .5rem;
+  box-shadow: inset 2px 0 0 #c0392b;
+}
+.salon-price-row .spn {
+  font-family: 'Lato', sans-serif;
+  font-size: .88rem; color: #555;
+}
+.salon-price-row .spp {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .78rem; font-weight: 700;
+  color: #c0392b; white-space: nowrap; margin-left: .5rem;
+}
+@media (max-width: 1024px) {
+  .price-categories { grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
+  .salon-prices-section { padding: 5rem 3rem; }
+}
+@media (max-width: 600px) {
+  .price-categories { grid-template-columns: 1fr; gap: 2rem; }
+  .salon-prices-section { padding: 4rem 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="#" class="nav-logo">
+    <img src="assets/images/logo.png" alt="Dominican All Star" class="logo-img" onerror="this.style.display='none'">
+    <span class="logo-text">DOMINICAN <span class="red">ALL STAR</span></span>
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about"    data-t="n-about">About</a></li>
+    <li><a href="#gallery"  data-t="n-gallery">Gallery</a></li>
+    <li><a href="#services" data-t="n-services">Services</a></li>
+    <li><a href="#salon"    data-t="n-salon">Salon</a></li>
+    <li><a href="#contact"  data-t="n-contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-wrap">
+      <button class="on" id="btn-en" onclick="setLang('en')">EN</button>
+      <button           id="btn-es" onclick="setLang('es')">ES</button>
+    </div>
+    <a href="tel:+16785403610" class="nav-phone">(678) 540-3610</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-img">
+    <img src="assets/images/gallery-03-action-locs-design.jpg" alt="Barber at work at Dominican All Star Marietta GA"/>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow" data-t="h-over">Marietta, Georgia · Walk-ins Welcome · Open 7 Days</p>
+    <h1 class="hero-headline">DOMINICAN<br><span class="red">ALL STAR</span></h1>
+    <div class="hero-bottom">
+      <p class="hero-sub" data-t="h-sub">Where every cut is a culture.</p>
+      <a href="tel:+16785403610" class="btn-main" data-t="h-cta">Call Us · (678) 540-3610</a>
+      <a href="https://maps.google.com/?q=677+Franklin+Gateway+SE+Marietta+GA" target="_blank" class="hero-dir" data-t="h-dir">Get Directions ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-num-wrap"><span class="stat-num" data-target="6">6</span><span class="stat-suf">+</span></div>
+      <span class="stat-label">Expert Barbers</span>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num-wrap"><span class="stat-num">5</span><span class="stat-suf">★</span></div>
+      <span class="stat-label">Google Rating</span>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num-wrap"><span class="stat-num" data-target="7">7</span></div>
+      <span class="stat-label">Days A Week</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about-section">
+  <div class="about-inner">
+    <div class="about-photo reveal-left">
+      <img src="assets/images/gallery-08-action-waves-banner.jpg" alt="Dominican All Star barbers at work in Marietta GA"/>
+    </div>
+    <div class="about-text reveal-right">
+      <p class="label" data-t="ab-lbl">Marietta's Go-To Barbershop</p>
+      <h2 data-t="ab-ttl">More Than a Cut — It's a Culture</h2>
+      <p data-t="ab-p1">Walk in and you feel it immediately — the Latin music, the energy, the smell of fresh product. Dominican All Star has been the go-to spot for anyone in the Atlanta area who refuses to settle for a bad cut. No appointments. No waiting weeks. Just show up.</p>
+      <p data-t="ab-p2">Founded by Adrian, a master barber with natural talent behind every cut, the shop has grown into a full team — Juan, Kelvin, Felipe, Suerto, Noel and more. Every service finishes with a hot towel. That's standard here, not an upgrade. And right next door at Suite B, Glam Dominican Salon brings the same energy to full hair care.</p>
+      <div class="about-pull">
+        <p data-t="ab-q">"Best barbers in Atlanta. For years I searched and could not find a decent barber. Adrian and crew are the best — the 36-mile drive is always worth it. Natural talent is what sets them apart."</p>
+        <cite data-t="ab-c">— Google Review · ★★★★★</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="gallery-section">
+  <div class="section-head reveal">
+    <p class="label" data-t="g-lbl">The Work</p>
+    <h2 data-t="g-ttl">FRESH CUTS ONLY</h2>
+  </div>
+
+  <!--
+    4 cols × 4 rows — all 12 gallery images, no blank cells
+    Row 1: g-01 (tall, rows 1+2) | g-08 (wide, 2 cols) | g-03
+    Row 2: g-01 cont              | g-02  | g-10  | g-04
+    Row 3: g-06 | g-09 | g-05 | g-07
+    Row 4: g-11 (wide) | g-12 (wide)
+  -->
+  <div class="photo-grid stagger-reveal">
+    <div class="cell tall">
+      <img src="assets/images/gallery-01-cornrows-fade.jpg" alt="Cornrows with fade"/>
+    </div>
+    <div class="cell wide">
+      <img src="assets/images/gallery-08-action-waves-banner.jpg" alt="Barber at work"/>
+    </div>
+    <div class="cell">
+      <img src="assets/images/gallery-03-action-locs-design.jpg" alt="Locs with design"/>
+    </div>
+    <div class="cell">
+      <img src="assets/images/gallery-02-slickback-high-fade-beard.jpg" alt="Slick back high fade with beard"/>
+    </div>
+    <div class="cell">
+      <img src="assets/images/gallery-10-taper-textured-beard.jpg" alt="Taper with textured beard"/>
+    </div>
+    <div class="cell">
+      <img src="assets/images/gallery-04-low-fade-waves.jpg" alt="Low fade waves"/>
+    </div>
+    <div class="cell">
+      <img src="assets/images/gallery-06-slickback-detail.jpg" alt="Slick back detail"/>
+    </div>
+    <div class="cell">
+      <img src="assets/images/gallery-09-curly-rizo-taper.jpg" alt="Curly rizo taper"/>
+    </div>
+    <div class="cell">
+      <img src="assets/images/gallery-05-braids-fade-beard.jpg" alt="Braids fade and beard"/>
+    </div>
+    <div class="cell">
+      <img src="assets/images/gallery-07-kids-cut-fade.jpg" alt="Kid's cut fade"/>
+    </div>
+    <div class="cell wide">
+      <img src="assets/images/gallery-11-afro-taper.jpg" alt="Natural afro taper"/>
+    </div>
+    <div class="cell wide">
+      <img src="assets/images/gallery-12-action-twists-star.jpg" alt="Action twists star cut"/>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services-section">
+  <div class="services-inner">
+    <div class="services-left reveal-left">
+      <p class="label" data-t="sv-lbl">Dominican Barbershop</p>
+      <h2 data-t="sv-ttl">WE DO IT ALL</h2>
+      <p data-t="sv-sub">Hot towel finish included with every service. No appointment needed — just walk in any day of the week.</p>
+      <span class="walk-tag" data-t="sv-badge">Walk-ins Only</span>
+    </div>
+    <ul class="svc-list stagger-reveal">
+      <li class="svc-row"><span class="svc-name" data-t="s1">Men's Haircut</span><span class="svc-dots"></span><span class="svc-price" data-t="p1">From $28</span></li>
+      <li class="svc-row"><span class="svc-name" data-t="s2">Beard Trim & Shape</span><span class="svc-dots"></span><span class="svc-price" data-t="p2">From $15</span></li>
+      <li class="svc-row"><span class="svc-name" data-t="s3">Line Up</span><span class="svc-dots"></span><span class="svc-price" data-t="p3">From $10</span></li>
+      <li class="svc-row"><span class="svc-name" data-t="s4">Kid's Cut</span><span class="svc-dots"></span><span class="svc-price" data-t="p4">From $22</span></li>
+      <li class="svc-row"><span class="svc-name" data-t="s5">Braids & Cornrows</span><span class="svc-dots"></span><span class="svc-price" data-t="p5">By style</span></li>
+      <li class="svc-row"><span class="svc-name" data-t="s6">Head Shave</span><span class="svc-dots"></span><span class="svc-price" data-t="p6">From $30</span></li>
+      <li class="svc-row"><span class="svc-name" data-t="s7">Full Service</span><span class="svc-dots"></span><span class="svc-price" data-t="p7">From $45</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- SALON -->
+<section id="salon" class="salon-section">
+  <div class="salon-img reveal-left">
+    <img src="assets/images/hero-barber-hot-towel.jpg" alt="Glam Dominican Salon — Marietta GA"/>
+  </div>
+  <div class="salon-content reveal-right">
+    <p class="label" data-t="sl-lbl">Next Door · Suite B</p>
+    <h2 data-t="sl-ttl">GLAM DOMINICAN SALON</h2>
+    <p data-t="sl-p">Under the same roof. The same All Star energy, now for full hair care. Walk-ins welcome — no appointment needed.</p>
+    <div class="salon-tags">
+      <span class="salon-tag" data-t="ss1">Blowouts</span>
+      <span class="salon-tag" data-t="ss2">Coloring</span>
+      <span class="salon-tag" data-t="ss3">Balayage</span>
+      <span class="salon-tag" data-t="ss4">Highlights</span>
+      <span class="salon-tag" data-t="ss5">Keratin</span>
+      <span class="salon-tag" data-t="ss6">Botox Treatment</span>
+      <span class="salon-tag" data-t="ss7">Braids</span>
+      <span class="salon-tag" data-t="ss8">Deep Conditioning</span>
+      <span class="salon-tag" data-t="ss9">Cuts</span>
+      <span class="salon-tag" data-t="ss10">Natural Hair</span>
+    </div>
+    <a href="tel:+17704218380" class="salon-phone">(770) 421-8380</a>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section">
+  <div class="reviews-inner">
+    <span class="label" data-t="rv-lbl">What People Say</span>
+
+    <div class="rev-feature reveal">
+      <p class="rev-text" data-t="r1">"Best barbers in Atlanta. For years I searched and could not find a decent barber. Adrian and crew are the best — the 36-mile drive is always worth it. Natural talent is what sets them apart."</p>
+      <span class="stars">★★★★★</span>
+      <span class="rev-by" data-t="r1a">— Google Review</span>
+    </div>
+
+    <div class="rev-grid stagger-reveal">
+      <div class="rev-card">
+        <div class="stars">★★★★★</div>
+        <p class="rev-text" data-t="r2">"I may not be Dominican but they treat you like family. Good vibes, good customer service — all the barbers are gifted. Mini facial at the end. Perfect every time."</p>
+        <span class="rev-by" data-t="r2a">— Google Review</span>
+      </div>
+      <div class="rev-card">
+        <div class="stars">★★★★★</div>
+        <p class="rev-text" data-t="r3">"My son has been coming here since age 4 — he's 12 now. Adrian is the BEST barber. The brotherhood, the uniforms, the speed. There's nothing like it."</p>
+        <span class="rev-by" data-t="r3a">— Google Review</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="contact-inner">
+    <div class="contact-left reveal-left">
+      <p class="label" data-t="ct-lbl">Hours & Info</p>
+      <h2 data-t="ct-ttl">VISIT US</h2>
+      <div class="locs">
+        <div class="loc">
+          <h3 data-t="loc1">All Star Barbershop · A</h3>
+          <div class="hour-row"><span class="hday" data-t="d1">Mon – Thu</span><span class="htime">10am – 8pm</span></div>
+          <div class="hour-row"><span class="hday" data-t="d2">Fri – Sat</span><span class="htime hi">9am – 8:30pm</span></div>
+          <div class="hour-row"><span class="hday" data-t="d3">Sunday</span><span class="htime">10am – 5pm</span></div>
+          <div class="loc-ph">
+            <a href="tel:+16785403610">(678) 540-3610</a>
+            &nbsp;·&nbsp;
+            <a href="tel:+19176157092">(917) 615-7092</a>
+          </div>
+        </div>
+        <div class="loc">
+          <h3 data-t="loc2">Glam Dominican Salon · B</h3>
+          <div class="hour-row"><span class="hday" data-t="ds1">Mon – Thu</span><span class="htime">10am – 7pm</span></div>
+          <div class="hour-row"><span class="hday" data-t="ds2">Fri – Sat</span><span class="htime hi">9am – 9pm</span></div>
+          <div class="hour-row"><span class="hday" data-t="ds3">Sunday</span><span class="htime">10am – 7pm</span></div>
+          <div class="loc-ph"><a href="tel:+17704218380">(770) 421-8380</a></div>
+        </div>
+      </div>
+      <div class="links-list">
+        <a href="https://maps.google.com/?q=677+Franklin+Gateway+SE+Marietta+GA" target="_blank" class="lnk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          677 Franklin Gateway SE · Marietta, GA 30067
+        </a>
+        <a href="https://www.facebook.com/AllStarDominicanBarbershop/" target="_blank" class="lnk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          @AllStarDominicanBarbershop
+        </a>
+        <a href="https://www.instagram.com/glamdominicansalon/" target="_blank" class="lnk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          @glamdominicansalon
+        </a>
+        <a href="https://www.youtube.com/channel/UCqQGP_kH4efYz0Ub7sQvoMg" target="_blank" class="lnk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          YouTube · @allstardominicanbarbershop9646
+        </a>
+      </div>
+    </div>
+    <div class="contact-right reveal-right">
+      <p class="label" data-t="map-lbl">Get Directions</p>
+      <h2 data-t="map-sub">677 FRANKLIN GATEWAY SE</h2>
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.4869490937827!2d-84.55016862376614!3d33.91553307320208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f512b8e5e97ba5%3A0x51b9e84a5ee5e7a3!2s677%20Franklin%20Gateway%20SE%20%23A%2C%20Marietta%2C%20GA%2030067!5e0!3m2!1sen!2sus!4v1715880000000!5m2!1sen!2sus"
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Dominican All Star location map">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#" class="foot-logo">DOMINICAN <span>ALL STAR</span></a>
+  <div class="foot-links">
+    <a href="https://www.facebook.com/AllStarDominicanBarbershop/" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/glamdominicansalon/" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/discover/all-star-dominican-barber" target="_blank">TikTok</a>
+    <a href="https://www.youtube.com/channel/UCqQGP_kH4efYz0Ub7sQvoMg" target="_blank">YouTube</a>
+  </div>
+  <p class="foot-copy">© 2025 Dominican All Star Barbershop · Glam Dominican Salon · Marietta, GA</p>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lb-close" aria-label="Close">&#x2715;</button>
+  <button class="lb-btn lb-prev" id="lb-prev" aria-label="Previous">&#8249;</button>
+  <div class="lb-img-wrap">
+    <img id="lb-img" src="" alt=""/>
+  </div>
+  <button class="lb-btn lb-next" id="lb-next" aria-label="Next">&#8250;</button>
+  <span class="lb-counter" id="lb-counter"></span>
+</div>
+
+<script>
+// Nav scroll shadow
+const nb = document.querySelector('.navbar');
+window.addEventListener('scroll', () => {
+  nb.style.boxShadow = scrollY > 10 ? '0 2px 24px rgba(0,0,0,.45)' : 'none';
+}, {passive:true});
+
+// Hamburger
+const burger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+burger.addEventListener('click', () => {
+  burger.classList.toggle('open');
+  navLinks.classList.toggle('open');
+});
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  burger.classList.remove('open');
+  navLinks.classList.remove('open');
+}));
+
+// ── SCROLL REVEAL ──
+(function () {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .stagger-reveal')
+    .forEach(el => obs.observe(el));
+})();
+
+// ── STATS COUNTER ──
+(function () {
+  let fired = false;
+  const counters = document.querySelectorAll('.stat-num[data-target]');
+  if (!counters.length) return;
+  const obs = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting && !fired) {
+      fired = true;
+      counters.forEach(el => {
+        const target = +el.dataset.target;
+        const dur = 1400;
+        const start = performance.now();
+        const tick = (now) => {
+          const p = Math.min((now - start) / dur, 1);
+          el.textContent = Math.round((1 - Math.pow(1 - p, 3)) * target);
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      });
+    }
+  }, { threshold: 0.5 });
+  const bar = document.querySelector('.stats-bar');
+  if (bar) obs.observe(bar);
+})();
+
+// ── GALLERY LIGHTBOX ──
+(function () {
+  document.querySelectorAll('.photo-grid .cell').forEach(cell => {
+    const icon = document.createElement('div');
+    icon.className = 'cell-expand';
+    icon.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>';
+    cell.appendChild(icon);
+  });
+
+  const imgs = [...document.querySelectorAll('.photo-grid .cell img')].map(img => ({ src: img.src, alt: img.alt }));
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lb-img');
+  const lbCtr = document.getElementById('lb-counter');
+  let idx = 0;
+
+  function open(i) {
+    idx = i;
+    lbImg.src = imgs[i].src;
+    lbImg.alt = imgs[i].alt;
+    lbCtr.textContent = (i + 1) + ' / ' + imgs.length;
+    lb.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    lb.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  function go(dir) {
+    idx = (idx + dir + imgs.length) % imgs.length;
+    lbImg.classList.add('fade');
+    setTimeout(() => {
+      lbImg.src = imgs[idx].src;
+      lbImg.alt = imgs[idx].alt;
+      lbCtr.textContent = (idx + 1) + ' / ' + imgs.length;
+      lbImg.classList.remove('fade');
+    }, 200);
+  }
+
+  document.querySelectorAll('.photo-grid .cell').forEach((c, i) => c.addEventListener('click', () => open(i)));
+  document.getElementById('lb-close').addEventListener('click', close);
+  document.getElementById('lb-prev').addEventListener('click', () => go(-1));
+  document.getElementById('lb-next').addEventListener('click', () => go(1));
+  lb.addEventListener('click', e => { if (e.target === lb) close(); });
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('active')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowRight') go(1);
+    if (e.key === 'ArrowLeft') go(-1);
+  });
+})();
+
+// ── ACTIVE NAV SECTION TRACKING ──
+(function () {
+  const secs = [...document.querySelectorAll('section[id]')];
+  const links = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(a => a.classList.toggle('nav-active', a.getAttribute('href') === '#' + e.target.id));
+      }
+    });
+  }, { threshold: 0.35, rootMargin: '-72px 0px 0px 0px' });
+  secs.forEach(s => obs.observe(s));
+})();
+
+// Language toggle
+const TR = {
+  en:{
+    'n-about':'About','n-gallery':'Gallery','n-services':'Services','n-salon':'Salon','n-contact':'Contact',
+    'h-over':'Marietta, Georgia · Walk-ins Welcome · Open 7 Days',
+    'h-sub':'Where every cut is a culture.',
+    'h-cta':'Call Us · (678) 540-3610',
+    'h-dir':'Get Directions ↗',
+    'ab-lbl':"Marietta's Go-To Barbershop",
+    'ab-ttl':'More Than a Cut — It\'s a Culture',
+    'ab-p1':'Walk in and you feel it immediately — the Latin music, the energy, the smell of fresh product. Dominican All Star has been the go-to spot for anyone in the Atlanta area who refuses to settle for a bad cut. No appointments. No waiting weeks. Just show up.',
+    'ab-p2':'Founded by Adrian, a master barber with natural talent behind every cut, the shop has grown into a full team — Juan, Kelvin, Felipe, Suerto, Noel and more. Every service finishes with a hot towel. That\'s standard here, not an upgrade. And right next door at Suite B, Glam Dominican Salon brings the same energy to full hair care.',
+    'ab-q':'"Best barbers in Atlanta. For years I searched and could not find a decent barber. Adrian and crew are the best — the 36-mile drive is always worth it. Natural talent is what sets them apart."',
+    'ab-c':'— Google Review · ★★★★★',
+    'g-lbl':'The Work','g-ttl':'FRESH CUTS ONLY',
+    'sv-lbl':'Barbershop · Suite A','sv-ttl':'WE DO IT ALL',
+    'sv-sub':'Hot towel finish included with every service. No appointment needed — just walk in any day of the week.',
+    'sv-badge':'Walk-ins Only',
+    's1':"Men's Haircut",'p1':'From $28',
+    's2':'Beard Trim & Shape','p2':'From $15',
+    's3':'Line Up','p3':'From $10',
+    's4':"Kid's Cut",'p4':'From $22',
+    's5':'Braids & Cornrows','p5':'By style',
+    's6':'Head Shave','p6':'From $30',
+    's7':'Full Service','p7':'From $45',
+    'sl-lbl':'Next Door · Suite B','sl-ttl':'GLAM DOMINICAN SALON',
+    'sl-p':'Under the same roof. The same All Star energy, now for full hair care. Walk-ins welcome — no appointment needed.',
+    'ss1':'Blowouts','ss2':'Coloring','ss3':'Balayage','ss4':'Highlights',
+    'ss5':'Keratin','ss6':'Botox Treatment','ss7':'Braids','ss8':'Deep Conditioning','ss9':'Cuts','ss10':'Natural Hair',
+    'rv-lbl':'What People Say',
+    'r1':'"Best barbers in Atlanta. For years I searched and could not find a decent barber. Adrian and crew are the best — the 36-mile drive is always worth it. Natural talent is what sets them apart."','r1a':'— Google Review',
+    'r2':'"I may not be Dominican but they treat you like family. Good vibes, good customer service — all the barbers are gifted. Mini facial at the end. Perfect every time."','r2a':'— Google Review',
+    'r3':'"My son has been coming here since age 4 — he\'s 12 now. Adrian is the BEST barber. The brotherhood, the uniforms, the speed. There\'s nothing like it."','r3a':'— Google Review',
+    'ct-lbl':'Hours & Info','ct-ttl':'VISIT US',
+    'loc1':'All Star Barbershop · A','loc2':'Glam Dominican Salon · B',
+    'd1':'Mon – Thu','d2':'Fri – Sat','d3':'Sunday',
+    'ds1':'Mon – Thu','ds2':'Fri – Sat','ds3':'Sunday',
+    'map-lbl':'Get Directions','map-sub':'677 FRANKLIN GATEWAY SE'
+  },
+  es:{
+    'n-about':'Nosotros','n-gallery':'Galería','n-services':'Servicios','n-salon':'Salón','n-contact':'Contacto',
+    'h-over':'Marietta, Georgia · Sin Cita · Abierto 7 Días',
+    'h-sub':'Donde cada corte es cultura.',
+    'h-cta':'Llámanos · (678) 540-3610',
+    'h-dir':'Cómo Llegar ↗',
+    'ab-lbl':'La Barbería Favorita de Marietta',
+    'ab-ttl':'Más Que un Corte — Es Cultura',
+    'ab-p1':'Entras y lo sientes de inmediato — la música latina, la energía, el olor a producto fresco. All Star es el lugar para quienes no se conforman con un mal corte. Sin cita. Sin esperar semanas. Solo llega.',
+    'ab-p2':'Fundada por Adrian, un maestro barbero con talento natural en cada corte, el local ha crecido con un equipo completo — Juan, Kelvin, Felipe, Suerto, Noel y más. Cada servicio termina con toalla caliente. Aquí eso es estándar. Y justo al lado en Suite B, Glam Dominican Salon trae la misma energía al cuidado del cabello.',
+    'ab-q':'"Los mejores barberos en Atlanta. Por años busqué y no encontré un buen barbero. Adrian y su equipo son los mejores — el viaje de 36 millas siempre vale la pena."',
+    'ab-c':'— Reseña de Google · ★★★★★',
+    'g-lbl':'El Trabajo','g-ttl':'SOLO CORTES FRESCOS',
+    'sv-lbl':'Barbería · Suite A','sv-ttl':'LO HACEMOS TODO',
+    'sv-sub':'Toalla caliente incluida con cada servicio. Sin cita — solo llega cualquier día de la semana.',
+    'sv-badge':'Sin Cita Previa',
+    's1':'Corte de Cabello','p1':'Desde $28',
+    's2':'Arreglo de Barba','p2':'Desde $15',
+    's3':'Línea','p3':'Desde $10',
+    's4':'Corte Infantil','p4':'Desde $22',
+    's5':'Trenzas & Cornrows','p5':'Según el estilo',
+    's6':'Rasurado Total','p6':'Desde $30',
+    's7':'Servicio Completo','p7':'Desde $45',
+    'sl-lbl':'Al Lado · Suite B','sl-ttl':'GLAM DOMINICAN SALON',
+    'sl-p':'Bajo el mismo techo. La misma energía All Star, ahora para el cuidado completo del cabello. Sin cita previa.',
+    'ss1':'Blowouts','ss2':'Coloración','ss3':'Balayage','ss4':'Mechas',
+    'ss5':'Keratina','ss6':'Tratamiento Botox','ss7':'Trenzas','ss8':'Acondicionamiento','ss9':'Cortes','ss10':'Cabello Natural',
+    'rv-lbl':'Lo Que Dicen',
+    'r1':'"Los mejores barberos en Atlanta. Por años busqué y no pude encontrar un buen barbero. Adrian y su equipo son los mejores — el viaje de 36 millas siempre vale la pena."','r1a':'— Reseña de Google',
+    'r2':'"Puede que no sea dominicano pero te tratan como familia. Buena vibra — todos los barberos son talentosos. Facial al final. Perfecto cada vez."','r2a':'— Reseña de Google',
+    'r3':'"Mi hijo viene aquí desde los 4 años — tiene 12 ahora. Adrian es el MEJOR. La hermandad, los uniformes, la velocidad. No hay nada igual."','r3a':'— Reseña de Google',
+    'ct-lbl':'Horario & Info','ct-ttl':'VISÍTANOS',
+    'loc1':'All Star Barbershop · A','loc2':'Glam Dominican Salon · B',
+    'd1':'Lun – Jue','d2':'Vie – Sáb','d3':'Domingo',
+    'ds1':'Lun – Jue','ds2':'Vie – Sáb','ds3':'Domingo',
+    'map-lbl':'Cómo Llegar','map-sub':'677 FRANKLIN GATEWAY SE'
+  }
+};
+
+function setLang(l) {
+  document.documentElement.setAttribute('data-lang', l);
+  document.getElementById('btn-en').classList.toggle('on', l==='en');
+  document.getElementById('btn-es').classList.toggle('on', l==='es');
+  document.querySelectorAll('[data-t]').forEach(el => {
+    const v = TR[l][el.dataset.t];
+    if (v !== undefined) el.textContent = v;
+  });
+}
+</script>
+</body>
+</html>
