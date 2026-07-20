@@ -995,72 +995,7 @@ footer {
   .salon-prices-section { padding: 4rem 1.5rem; }
 }
 
-/* ── CUSTOM CURSOR ── */
-#cursor {
-  display: none;
-  position: fixed;
-  z-index: 99999;
-  pointer-events: none;
-  font-size: 1.45rem;
-  line-height: 1;
-  transform: translate(-50%, -55%) scale(1);
-  user-select: none;
-  transition: transform .18s ease;
-}
-#cursor.hovered { transform: translate(-50%,-55%) scale(1.3); }
-#cursor-ring {
-  display: none;
-  position: fixed;
-  width: 44px; height: 44px;
-  border: 1.5px solid transparent;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 99998;
-  transition: width .2s ease, height .2s ease, border-color .2s ease;
-}
-#cursor-ring.hovered {
-  width: 52px; height: 52px;
-  border-color: rgba(192,57,43,.65);
-}
-@keyframes cur-pop {
-  0%   { transform: translate(-50%,-55%) scale(1); }
-  45%  { transform: translate(-50%,-55%) scale(1.5); }
-  100% { transform: translate(-50%,-55%) scale(1); }
-}
-#cursor.pop { animation: cur-pop .2s ease; }
-/* must come after base rules so display:block wins */
-@media (hover: hover) {
-  * { cursor: none !important; }
-  #cursor, #cursor-ring { display: block; }
-}
-
 /* ── WOW LAYER ──────────────────────────────── */
-
-/* cursor trail particles */
-.cur-trail {
-  position: fixed; pointer-events: none; z-index: 99990;
-  border-radius: 50%;
-  transform: translate(-50%,-50%);
-  animation: trail-out .55s ease forwards;
-}
-@keyframes trail-out {
-  0%   { opacity: .7;  transform: translate(-50%,-50%) scale(1); }
-  100% { opacity: 0;   transform: translate(-50%,-50%) scale(0); }
-}
-
-/* click ripple */
-.click-ripple {
-  position: fixed; pointer-events: none; z-index: 99989;
-  border-radius: 50%;
-  border: 1.5px solid rgba(192,57,43,.75);
-  transform: translate(-50%,-50%);
-  animation: ripple-out .65s ease forwards;
-}
-@keyframes ripple-out {
-  0%   { width: 0;    height: 0;    opacity: 1; }
-  100% { width: 88px; height: 88px; opacity: 0; }
-}
 
 /* hero film grain */
 .hero-grain {
@@ -1072,22 +1007,6 @@ footer {
 
 /* hero parallax smooth track */
 .hero-img img { transition: transform .14s linear; transform: scale(1.08); }
-
-/* power-on border flash */
-#power-flash {
-  position: fixed; inset: 0;
-  border: 2px solid #c0392b;
-  pointer-events: none; z-index: 99997;
-  animation: power-on 1.5s ease forwards;
-}
-@keyframes power-on {
-  0%  { opacity: 0; }
-  7%  { opacity: 1; }
-  18% { opacity: 0; }
-  28% { opacity: .55; }
-  40% { opacity: 0; }
-  100%{ opacity: 0; }
-}
 
 /* gallery subtle scanlines */
 .gallery-section { position: relative; }
@@ -1225,16 +1144,16 @@ footer {
 
   <div class="photo-grid">
     <div class="cell"><img src="assets/images/gallery-08-action-waves-banner.jpg" alt="Barbers at work — Dominican All Star"/></div>
-    <div class="cell"><img src="assets/images/73e5c046-aa8f-427e-9b3e-8688426abc99.JPG" alt="Outdoor action — All Star"/></div>
-    <div class="cell"><img src="assets/images/37349ad3-7d3d-41b5-aaf9-6f45ceeb01f0.JPG" alt="Barber working waves and beard"/></div>
+    <div class="cell"><img src="assets/images/a97360ae-25b2-4ea8-8be5-488a6d31c557.JPG" alt="Curly fade with tattoo detail"/></div>
+    <div class="cell"><img src="assets/images/c9c79e70-4eef-4f57-8046-2a557ad00a7e.JPG" alt="Sharp line up — scissor work"/></div>
     <div class="cell"><img src="assets/images/8a08e241-098b-4f0b-a94d-bab37db545a9.JPG" alt="Slick back fade — live cut"/></div>
-    <div class="cell"><img src="assets/images/2fc58293-5500-4ee0-8407-f3a702142368.JPG" alt="Clean cornrows with tight fade"/></div>
+    <div class="cell"><img src="assets/images/755b094a-fc5f-4fe4-b8af-f968718b0463.JPG" alt="Tight curls with skin fade — back view"/></div>
     <div class="cell"><img src="assets/images/gallery-01-cornrows-fade.jpg" alt="Cornrows with clean fade"/></div>
     <div class="cell"><img src="assets/images/gallery-12-action-twists-star.jpg" alt="Twists with star design"/></div>
     <div class="cell"><img src="assets/images/gallery-05-braids-fade-beard.jpg" alt="Braids with fade and beard"/></div>
-    <div class="cell"><img src="assets/images/22006dc0-8259-4866-84b8-e26f7c8f27a0.JPG" alt="Comb over fade with clean part"/></div>
+    <div class="cell"><img src="assets/images/IMG_0853.jpg" alt="Wave fade — back angle"/></div>
     <div class="cell"><img src="assets/images/919da0e0-afa2-4e94-96db-b24dc62b88f5.JPG" alt="Skin fade — sharp blend"/></div>
-    <div class="cell"><img src="assets/images/gallery-09-curly-rizo-taper.jpg" alt="Curly rizo taper"/></div>
+    <div class="cell"><img src="assets/images/12b2b67a-1f5e-4b54-b632-064ad7cf8c4f.JPG" alt="Curly afro fade with beard"/></div>
     <div class="cell"><img src="assets/images/a7e3a697-43ec-4d28-86de-aad5fb2dd3fe.JPG" alt="Curly taper fade"/></div>
     <div class="cell"><img src="assets/images/gallery-11-afro-taper.jpg" alt="Natural afro taper"/></div>
     <div class="cell"><img src="assets/images/gallery-04-low-fade-waves.jpg" alt="Low fade with waves"/></div>
@@ -1243,9 +1162,9 @@ footer {
     <div class="cell"><img src="assets/images/gallery-02-slickback-high-fade-beard.jpg" alt="Slick back high fade with beard"/></div>
     <div class="cell"><img src="assets/images/gallery-10-taper-textured-beard.jpg" alt="Taper with textured beard"/></div>
     <div class="cell"><img src="assets/images/b34aee23-adf3-4630-8d08-1480e46bdeb9.JPG" alt="Comb over with full beard"/></div>
-    <div class="cell"><img src="assets/images/d2bb4ea8-33a8-48ea-8a3a-635a09c5e2a7.JPG" alt="Textured fade with full beard"/></div>
+    <div class="cell"><img src="assets/images/198236a0-3c40-46da-ba7a-1dd7a804cca8.JPG" alt="Sharp buzz fade with line up"/></div>
     <div class="cell"><img src="assets/images/gallery-07-kids-cut-fade.jpg" alt="Kid's cut with clean fade"/></div>
-    <div class="cell"><img src="assets/images/a5049941-956a-4a3c-9d51-e467cca494ce.JPG" alt="Kid's comb over fade"/></div>
+    <div class="cell"><img src="assets/images/53b56422-b9dd-4ffe-96d7-f5fc412f8942.JPG" alt="Kid's fade — back view"/></div>
     <div class="cell"><img src="assets/images/IMG_0851.jpg" alt="Mid fade with shaped beard"/></div>
     <div class="cell"><img src="assets/images/IMG_6940.jpg" alt="Hot towel finish — the All Star experience"/></div>
   </div>
@@ -1623,70 +1542,6 @@ navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   secs.forEach(s => obs.observe(s));
 })();
 
-// ── CUSTOM BARBER CURSOR ──
-(function () {
-  if (!window.matchMedia('(hover: hover)').matches) return;
-
-  const TOOLS = ['✂️', '🪒', '💈', '🧴', '🪮'];
-  let ti = 0, dist = 0, lx = 0, ly = 0;
-  let mx = 0, my = 0, rx = 0, ry = 0;
-
-  const cur = document.createElement('span');
-  cur.id = 'cursor';
-  cur.setAttribute('aria-hidden', 'true');
-  cur.textContent = TOOLS[0];
-  document.body.appendChild(cur);
-
-  const ring = document.createElement('div');
-  ring.id = 'cursor-ring';
-  ring.setAttribute('aria-hidden', 'true');
-  document.body.appendChild(ring);
-
-  // main cursor tracks exactly
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    cur.style.left = mx + 'px';
-    cur.style.top  = my + 'px';
-
-    const dx = mx - lx, dy = my - ly;
-    dist += Math.sqrt(dx * dx + dy * dy);
-    lx = mx; ly = my;
-
-    if (dist > 110) {
-      dist = 0;
-      ti = (ti + 1) % TOOLS.length;
-      cur.textContent = TOOLS[ti];
-      cur.classList.remove('pop');
-      void cur.offsetWidth;
-      cur.classList.add('pop');
-    }
-  }, { passive: true });
-
-  // ring follows with smooth lag
-  (function tickRing() {
-    rx += (mx - rx) * 0.13;
-    ry += (my - ry) * 0.13;
-    ring.style.left = rx + 'px';
-    ring.style.top  = ry + 'px';
-    requestAnimationFrame(tickRing);
-  })();
-
-  // hover feedback on anything clickable
-  const CLICKABLE = 'a, button, .cell, .gf-btn, .svc-row, .salon-tag, .rev-card, .lnk, .walk-tag, .nav-call, .btn-main';
-  document.addEventListener('mouseover', e => {
-    if (e.target.closest(CLICKABLE)) {
-      cur.classList.add('hovered');
-      ring.classList.add('hovered');
-    }
-  });
-  document.addEventListener('mouseout', e => {
-    if (e.target.closest(CLICKABLE)) {
-      cur.classList.remove('hovered');
-      ring.classList.remove('hovered');
-    }
-  });
-})();
-
 // ── MOBILE TOAST ──
 (function () {
   if (window.matchMedia('(hover: hover)').matches) return;
@@ -1707,8 +1562,8 @@ navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
       const ny = (e.clientY - r.top)  / r.height - 0.5;
 
       cell.style.transition   = 'transform .08s ease, box-shadow .08s ease';
-      cell.style.transform    = `perspective(700px) rotateY(${nx * 14}deg) rotateX(${-ny * 14}deg) scale(1.04)`;
-      cell.style.boxShadow    = `${-nx * 24}px ${-ny * 24}px 38px rgba(0,0,0,.65)`;
+      cell.style.transform    = `perspective(700px) rotateY(${nx * 7}deg) rotateX(${-ny * 7}deg) scale(1.04)`;
+      cell.style.boxShadow    = `${-nx * 12}px ${-ny * 12}px 38px rgba(0,0,0,.65)`;
       cell.style.zIndex       = '3';
       cell.style.setProperty('--mx', ((e.clientX - r.left) / r.width  * 100) + '%');
       cell.style.setProperty('--my', ((e.clientY - r.top)  / r.height * 100) + '%');
@@ -1723,96 +1578,13 @@ navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   });
 })();
 
-// ── WOW: POWER-ON FLASH ──
-(function () {
-  const el = document.createElement('div');
-  el.id = 'power-flash';
-  document.body.appendChild(el);
-  setTimeout(() => el.remove(), 1500);
-})();
-
-// ── WOW: CURSOR TRAIL ──
-(function () {
-  if (!window.matchMedia('(hover: hover)').matches) return;
-  let last = 0;
-  document.addEventListener('mousemove', e => {
-    const now = Date.now();
-    if (now - last < 28) return;
-    last = now;
-    const t = document.createElement('span');
-    t.className = 'cur-trail';
-    const s = 3 + Math.random() * 4;
-    t.style.cssText = `left:${e.clientX}px;top:${e.clientY}px;width:${s}px;height:${s}px;background:#c0392b`;
-    document.body.appendChild(t);
-    setTimeout(() => t.remove(), 560);
-  }, {passive: true});
-})();
-
-// ── WOW: CLICK RIPPLE ──
-(function () {
-  document.addEventListener('click', e => {
-    const r = document.createElement('span');
-    r.className = 'click-ripple';
-    r.style.cssText = `left:${e.clientX}px;top:${e.clientY}px`;
-    document.body.appendChild(r);
-    setTimeout(() => r.remove(), 660);
-  });
-})();
-
-// ── WOW: MAGNETIC BUTTONS ──
-(function () {
-  if (!window.matchMedia('(hover: hover)').matches) return;
-  document.querySelectorAll('.btn-main, .walk-tag, .nav-phone').forEach(btn => {
-    btn.addEventListener('mousemove', e => {
-      const r = btn.getBoundingClientRect();
-      const dx = (e.clientX - (r.left + r.width  / 2)) * 0.2;
-      const dy = (e.clientY - (r.top  + r.height / 2)) * 0.2;
-      btn.style.transition = 'transform .1s ease';
-      btn.style.transform  = `translate(${dx}px,${dy}px)`;
-    });
-    btn.addEventListener('mouseleave', () => {
-      btn.style.transition = 'transform .5s cubic-bezier(.23,1,.32,1)';
-      btn.style.transform  = '';
-    });
-  });
-})();
-
-// ── WOW: TEXT SCRAMBLE on section headings ──
-(function () {
-  const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ★◆▲0123456789';
-  function scramble(el) {
-    const orig = el.textContent;
-    const chars = [...orig];
-    let frame = 0;
-    const total = 24;
-    const tick = () => {
-      el.textContent = chars.map((c, i) => {
-        if (c === ' ' || c === '-' || c === '—') return c;
-        if (frame > (i / chars.length) * total) return c;
-        return CHARS[Math.floor(Math.random() * CHARS.length)];
-      }).join('');
-      if (++frame <= total) requestAnimationFrame(tick);
-      else el.textContent = orig;
-    };
-    tick();
-  }
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { scramble(e.target); obs.unobserve(e.target); }
-    });
-  }, {threshold: 0.6});
-  document.querySelectorAll(
-    '.gallery-section h2, .services-left h2, .salon-content h2, .contact-left h2'
-  ).forEach(el => obs.observe(el));
-})();
-
 // ── WOW: HERO MOUSE PARALLAX ──
 (function () {
   const img = document.querySelector('.hero-img img');
   if (!img || !window.matchMedia('(hover: hover)').matches) return;
   window.addEventListener('mousemove', e => {
-    const rx = (e.clientX / window.innerWidth  - 0.5) * 20;
-    const ry = (e.clientY / window.innerHeight - 0.5) * 12;
+    const rx = (e.clientX / window.innerWidth  - 0.5) * 10;
+    const ry = (e.clientY / window.innerHeight - 0.5) * 6;
     img.style.transform = `scale(1.08) translate(${rx}px,${ry}px)`;
   }, {passive: true});
 })();
