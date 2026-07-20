@@ -1447,42 +1447,6 @@ navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   });
 })();
 
-// ── LOGO INTERACTIVE MOUSE EFFECT ──
-(function () {
-  const logo = document.querySelector('.logo-img');
-  if (!logo) return;
-
-  let mouseX = 0, mouseY = 0;
-  let logoX = 0, logoY = 0;
-
-  document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  });
-
-  function animate() {
-    const rect = logo.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-
-    const distX = mouseX - centerX;
-    const distY = mouseY - centerY;
-    const distance = Math.sqrt(distX * distX + distY * distY);
-
-    const maxDist = 400;
-    const strength = Math.max(0, 1 - distance / maxDist);
-
-    logoX += (distX * strength * 0.08 - logoX) * 0.1;
-    logoY += (distY * strength * 0.08 - logoY) * 0.1;
-
-    logo.style.transform = `translate(${logoX}px, ${logoY}px)`;
-
-    requestAnimationFrame(animate);
-  }
-
-  animate();
-})();
-
 // ── GALLERY FILTER ──
 (function () {
   const grid = document.querySelector('.photo-grid');
