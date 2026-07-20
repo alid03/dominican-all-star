@@ -187,6 +187,15 @@ a { text-decoration: none; color: inherit; }
 }
 .hero-dir:hover { color: #fff; border-color: rgba(255,255,255,.55); }
 
+/* ── LABELS (base) ── */
+.label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .85rem; font-weight: 600;
+  letter-spacing: .08em; text-transform: none;
+  color: #c0392b;
+  margin-bottom: 1rem;
+}
+
 /* ── ABOUT ── */
 .about-section {
   background: #fff;
@@ -212,10 +221,6 @@ a { text-decoration: none; color: inherit; }
   display: flex; flex-direction: column; justify-content: center;
 }
 .about-text .label {
-  font-family: 'Montserrat', sans-serif;
-  font-size: .85rem; font-weight: 600;
-  letter-spacing: .08em; text-transform: none;
-  color: #c0392b;
   margin-bottom: 1.25rem;
 }
 .about-text h2 {
@@ -265,13 +270,6 @@ a { text-decoration: none; color: inherit; }
   text-align: center;
   margin-bottom: 3.5rem;
 }
-.gallery-section .label {
-  font-family: 'Montserrat', sans-serif;
-  font-size: .85rem; font-weight: 600;
-  letter-spacing: .08em; text-transform: none;
-  color: #c0392b;
-  margin-bottom: .85rem;
-}
 .gallery-section h2 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: clamp(2.5rem, 5vw, 4rem);
@@ -290,11 +288,11 @@ a { text-decoration: none; color: inherit; }
   position: relative;
   will-change: transform;
   transition: transform .5s ease, box-shadow .5s ease;
+  cursor: zoom-in;
 }
 .photo-grid .cell.tall { grid-row: span 2; }
 .photo-grid .cell.wide { grid-column: span 2; }
 .photo-grid img { transition: transform .5s ease; }
-/* shine overlay — follows mouse via --mx/--my CSS vars set by JS */
 .photo-grid .cell::after {
   content: '';
   position: absolute; inset: 0; z-index: 1;
@@ -325,12 +323,6 @@ a { text-decoration: none; color: inherit; }
 .services-inner {
   max-width: 1100px; margin: 0 auto;
   display: grid; grid-template-columns: 1fr 1.8fr; gap: 6rem; align-items: start;
-}
-.services-left .label {
-  font-family: 'Montserrat', sans-serif;
-  font-size: .85rem; font-weight: 600;
-  letter-spacing: .08em; text-transform: none;
-  color: #c0392b; margin-bottom: 1rem;
 }
 .services-left h2 {
   font-family: 'Bebas Neue', sans-serif;
@@ -386,12 +378,6 @@ a { text-decoration: none; color: inherit; }
   padding: 5.5rem 4.5rem;
   display: flex; flex-direction: column; justify-content: center;
 }
-.salon-content .label {
-  font-family: 'Montserrat', sans-serif;
-  font-size: .85rem; font-weight: 600;
-  letter-spacing: .08em; text-transform: none;
-  color: #c0392b; margin-bottom: 1rem;
-}
 .salon-content h2 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: clamp(2.5rem, 4vw, 3.8rem);
@@ -432,10 +418,6 @@ a { text-decoration: none; color: inherit; }
   max-width: 1100px; margin: 0 auto;
 }
 .reviews-section .label {
-  font-family: 'Montserrat', sans-serif;
-  font-size: .85rem; font-weight: 600;
-  letter-spacing: .08em; text-transform: none;
-  color: #c0392b;
   margin-bottom: 0.5rem;
   text-align: center;
   display: block;
@@ -494,12 +476,6 @@ a { text-decoration: none; color: inherit; }
 .contact-inner {
   max-width: 1100px; margin: 0 auto;
   display: grid; grid-template-columns: 1fr 1fr; gap: 5rem;
-}
-.contact-left .label, .contact-right .label {
-  font-family: 'Montserrat', sans-serif;
-  font-size: .85rem; font-weight: 600;
-  letter-spacing: .08em; text-transform: none;
-  color: #c0392b; margin-bottom: 1rem;
 }
 .contact-left h2, .contact-right h2 {
   font-family: 'Bebas Neue', sans-serif;
@@ -575,24 +551,16 @@ footer {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
-  .about-inner { grid-template-columns: 1fr; }
+  .about-inner, .services-inner, .salon-section, .contact-inner { grid-template-columns: 1fr; }
   .about-photo { min-height: 400px; position: relative; }
   .about-photo img { position: absolute; }
   .about-text { padding: 4.5rem 3rem; }
-  .services-inner { grid-template-columns: 1fr; gap: 3rem; }
-  .salon-section { grid-template-columns: 1fr; }
+  .services-inner, .contact-inner { gap: 3rem; }
   .salon-img { min-height: 50vw; }
-  .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
   .locs { grid-template-columns: 1fr; gap: 2rem; }
   .rev-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-  /* gallery: 2-col on tablet */
-  .photo-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: none;
-    grid-auto-rows: 280px;
-  }
-  .photo-grid .cell.tall { grid-row: span 1; }
-  .photo-grid .cell.wide { grid-column: span 2; }
+  .photo-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 280px; }
+  .photo-grid .cell.tall, .photo-grid .cell.wide { grid-column: span 1; grid-row: span 1; }
 }
 @media (max-width: 768px) {
   .navbar { padding: 0 1.25rem; }
@@ -609,23 +577,16 @@ footer {
   .nav-links li { border-bottom: 1px solid rgba(255,255,255,.07); }
   .nav-links a { display: block; padding: .85rem 0; font-size: .8rem; }
   .hamburger { display: flex; }
-  .nav-right .lang-wrap { display: none; }
-  .nav-phone { display: none; }
+  .nav-right .lang-wrap, .nav-phone { display: none; }
   .hero-content { padding: 2rem 1.5rem 3.5rem; }
   .about-text { padding: 3.5rem 1.5rem; }
   .gallery-section { padding: 4.5rem 1.25rem; }
-  .services-section { padding: 4.5rem 1.5rem; }
+  .services-section, .reviews-section, .contact-section { padding: 4.5rem 1.5rem; }
   .salon-content { padding: 4rem 2rem; }
-  .reviews-section { padding: 4.5rem 1.5rem; }
   .rev-feature { padding: 0 0 2.5rem; }
-  .contact-section { padding: 4.5rem 1.5rem; }
   footer { padding: 2rem 1.5rem; }
-  .photo-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 220px;
-  }
-  .photo-grid .cell.tall { grid-row: span 1; }
-  .photo-grid .cell.wide { grid-column: span 2; }
+  .photo-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 220px; }
+  .photo-grid .cell.tall, .photo-grid .cell.wide { grid-column: span 2; grid-row: span 1; }
 }
 @media (max-width: 480px) {
   .foot-links { gap: 1rem; }
@@ -693,11 +654,9 @@ footer {
 }
 @media (max-width: 768px) {
   .stats-inner { grid-template-columns: repeat(2, 1fr); }
-  .stats-bar { padding: 2.5rem 1.5rem; }
 }
 
 /* ── GALLERY EXPAND ICON ── */
-.photo-grid .cell { cursor: zoom-in; position: relative; }
 .cell-expand {
   position: absolute; inset: 0;
   display: flex; align-items: center; justify-content: center;
@@ -847,10 +806,6 @@ footer {
   padding-top: 1.25rem; border-top: 1px solid #e5e5e5;
   display: block;
 }
-.svc-note::before {
-  display: none;
-}
-
 /* ── REVIEW INTRO ── */
 .rev-intro {
   font-family: 'Lato', sans-serif;
@@ -867,11 +822,6 @@ footer {
   color: #c0392b; margin-top: 1.5rem;
   display: flex; align-items: center; gap: .5rem;
 }
-.contact-note::before {
-  content: '';
-  display: none;
-}
-
 /* ── LOCATION SIGN PHOTO ── */
 .location-sign-img {
   margin-top: 1.5rem;
@@ -887,17 +837,16 @@ footer {
 /* ── MOBILE POLISH ── */
 @media (max-width: 768px) {
   .gf-btn { padding: .6rem 1rem; font-size: .8rem; }
-  .hero-bottom { gap: 1rem; }
   .btn-main { padding: .9rem 1.6rem; font-size: .85rem; }
+  .hero-bottom { gap: 1rem; }
   .stat-label { font-size: .8rem; letter-spacing: 0; }
   .stat-num-wrap { font-size: clamp(2rem, 7vw, 3rem); }
   .services-visual { height: 200px; }
   .location-sign-img { height: 180px; }
 }
 
-/* ── STATS 3-COL FIX ── */
+/* ── STATS GRID ── */
 .stats-inner { grid-template-columns: repeat(3, 1fr); }
-@media (max-width: 768px) { .stats-inner { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 480px) { .stats-inner { grid-template-columns: 1fr; } }
 
 /* ── SALON LOGO IN CONTENT ── */
@@ -937,10 +886,8 @@ footer {
 .salon-prices-inner { max-width: 1100px; margin: 0 auto; }
 .salon-prices-head { text-align: center; margin-bottom: 3.5rem; }
 .salon-prices-head .label {
-  font-family: 'Montserrat', sans-serif;
-  font-size: .85rem; font-weight: 600;
-  letter-spacing: .08em; text-transform: none;
-  color: #c0392b; margin-bottom: .85rem; display: block;
+  margin-bottom: .85rem;
+  display: block;
 }
 .salon-prices-head h2 {
   font-family: 'Bebas Neue', sans-serif;
