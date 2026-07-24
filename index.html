@@ -1219,13 +1219,9 @@ footer {
       </div>
       <p class="contact-note" data-t="ct-note">Walk in any day — no appointment needed.</p>
       <div class="links-list">
-        <a href="https://maps.google.com/?q=677+Franklin+Gateway+SE+Marietta+GA" target="_blank" class="lnk">
+        <a id="location-link" href="https://maps.google.com/?q=677+Franklin+Gateway+SE+Marietta+GA" target="_blank" class="lnk">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Google Maps · 677 Franklin Gateway SE, Marietta, GA 30067
-        </a>
-        <a href="https://maps.apple.com/?address=677%20Franklin%20Gateway%20SE,%20Marietta,%20GA%2030067" target="_blank" class="lnk">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Apple Maps · 677 Franklin Gateway SE, Marietta, GA 30067
+          <span id="location-text">677 Franklin Gateway SE · Marietta, GA 30067</span>
         </a>
         <a href="https://www.facebook.com/AllStarDominicanBarbershop/" target="_blank" class="lnk">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -1500,11 +1496,17 @@ const TR = {
 
 // Detect iOS and set Maps URL
 (function () {
-  const btn = document.getElementById('directions-btn');
-  if (!btn) return;
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+  const dirBtn = document.getElementById('directions-btn');
+  const locLink = document.getElementById('location-link');
+  const appleUrl = 'https://maps.apple.com/?address=677%20Franklin%20Gateway%20SE,%20Marietta,%20GA%2030067';
+  const googleUrl = 'https://maps.google.com/?q=677+Franklin+Gateway+SE+Marietta+GA';
   if (isIOS) {
-    btn.href = 'https://maps.apple.com/?address=677%20Franklin%20Gateway%20SE,%20Marietta,%20GA%2030067';
+    if (dirBtn) dirBtn.href = appleUrl;
+    if (locLink) locLink.href = appleUrl;
+  } else {
+    if (dirBtn) dirBtn.href = googleUrl;
+    if (locLink) locLink.href = googleUrl;
   }
 })();
 
