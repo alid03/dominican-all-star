@@ -974,7 +974,7 @@ footer {
     <div class="hero-bottom">
       <p class="hero-sub" data-t="h-sub">A fresh look with soul</p>
       <a href="tel:+16785403610" class="btn-main" data-t="h-cta">Call Us · (678) 540-3610</a>
-      <a href="https://maps.google.com/?q=677+Franklin+Gateway+SE+Marietta+GA" target="_blank" class="hero-dir" data-t="h-dir">Get Directions ↗</a>
+      <a id="directions-btn" href="https://maps.google.com/?q=677+Franklin+Gateway+SE+Marietta+GA" target="_blank" class="hero-dir" data-t="h-dir">Get Directions ↗</a>
       <a href="#gallery" class="hero-dir" data-t="h-work">See The Work ↓</a>
     </div>
   </div>
@@ -1497,6 +1497,16 @@ const TR = {
     'map-lbl':'Cómo Llegar','map-sub':'677 FRANKLIN GATEWAY SE'
   }
 };
+
+// Detect iOS and set Maps URL
+(function () {
+  const btn = document.getElementById('directions-btn');
+  if (!btn) return;
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+  if (isIOS) {
+    btn.href = 'https://maps.apple.com/?address=677%20Franklin%20Gateway%20SE,%20Marietta,%20GA%2030067';
+  }
+})();
 
 function setLang(l) {
   document.documentElement.setAttribute('data-lang', l);
