@@ -897,32 +897,6 @@ footer {
 }
 .gallery-section .section-head,
 .gallery-section .photo-grid { position: relative; z-index: 1; }
-
-/* ── MOBILE TOAST ── */
-#mobile-toast {
-  display: none;
-  position: fixed;
-  bottom: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #1a1010;
-  border: 1px solid rgba(255,255,255,.15);
-  border-top: none;
-  color: rgba(255,255,255,.8);
-  font-family: 'Montserrat', sans-serif;
-  font-size: .8rem; font-weight: 400;
-  letter-spacing: 0; text-transform: none;
-  padding: .75rem 1.5rem;
-  z-index: 9998;
-  white-space: nowrap;
-  opacity: 0;
-  transition: opacity .45s ease;
-  pointer-events: none;
-}
-#mobile-toast.show { opacity: 1; }
-@media (hover: none) {
-  #mobile-toast { display: block; }
-}
 </style>
 <script type="application/ld+json">
 {
@@ -1225,7 +1199,7 @@ footer {
       <h2 data-t="ct-ttl">VISIT US</h2>
       <div class="locs">
         <div class="loc">
-          <h3 data-t="loc1">All Star Barbershop</h3>
+          <h3 data-t="loc1">Allstar Dominican Barbershop</h3>
           <div class="hour-row"><span class="hday" data-t="d1">Mon – Thu</span><span class="htime">10am – 8pm</span></div>
           <div class="hour-row"><span class="hday" data-t="d2">Fri – Sat</span><span class="htime hi">9am – 8:30pm</span></div>
           <div class="hour-row"><span class="hday" data-t="d3">Sunday</span><span class="htime">10am – 5pm</span></div>
@@ -1296,9 +1270,6 @@ footer {
   </div>
   <p class="foot-copy">© 2025 Allstar Dominican Barbershop & Hair Salon💈Marietta, GA</p>
 </footer>
-
-<!-- MOBILE TOAST -->
-<div id="mobile-toast">Best experienced on desktop</div>
 
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
@@ -1409,17 +1380,6 @@ navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
     });
   }, { threshold: 0.35, rootMargin: '-72px 0px 0px 0px' });
   secs.forEach(s => obs.observe(s));
-})();
-
-// ── MOBILE TOAST ──
-(function () {
-  if (window.matchMedia('(hover: hover)').matches) return;
-  const toast = document.getElementById('mobile-toast');
-  if (!toast) return;
-  setTimeout(() => {
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 3500);
-  }, 1200);
 })();
 
 // ── GALLERY 3D TILT ──
