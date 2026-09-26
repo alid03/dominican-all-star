@@ -1916,6 +1916,23 @@ function setLang(l) {
     if (v !== undefined) el.textContent = v;
   });
 }
+
+// Hide # in URLs while keeping navigation
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a[href^="#"]');
+  if (!link) return;
+
+  const targetId = link.getAttribute('href').slice(1);
+  const target = document.getElementById(targetId);
+
+  if (target) {
+    e.preventDefault();
+    // Change URL without hash
+    history.pushState(null, '', window.location.pathname + window.location.search);
+    // Scroll to target
+    target.scrollIntoView({ behavior: 'smooth' });
+  }
+});
 </script>
 </body>
 </html>
